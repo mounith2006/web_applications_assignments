@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portal</title>
+</head>
+
+<body>
+
+<table border="1" width="100%" height="600">
+
+    <!-- Top Navigation -->
+    <tr height="70">
+        <td colspan="2" bgcolor="#D9EAF7">
+
+            <table width="100%" border="1" cellspacing="0" cellpadding="10">
+                <tr align="center">
+
+                    <td>
+                        <a href="home.html" target="content">HOME</a>
+                    </td>
+
+                    <td>
+                        <a href="dashboard.html" target="content">DASHBOARD</a>
+                    </td>
+
+                    <td>
+                        <a href="registration.html" target="content">REGISTRATION</a>
+                    </td>
+
+                    <td>
+                        <a href="logout.html" target="content">LOGOUT</a>
+                    </td>
+
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+
+    <!-- Main Content -->
+    <tr>
+
+        <!-- Left Menu -->
+        <td width="25%" valign="top">
+            <iframe src="studentinfo.html"
+                    width="100%"
+                    height="500"
+                    frameborder="0">
+            </iframe>
+        </td>
+
+        <!-- Right Content -->
+        <td>
+            <iframe name="content"
+                    src="home.html"
+                    width="100%"
+                    height="500"
+                    frameborder="0">
+            </iframe>
+        </td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>
