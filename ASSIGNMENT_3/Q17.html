@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Form</title>
+</head>
+<body>
+
+    <h2>User Information</h2>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" id="name"><br><br>
+
+        <label>Age:</label>
+        <input type="number" id="age"><br><br>
+
+        <label>Email:</label>
+        <input type="email" id="email"><br><br>
+
+        <button type="button" onclick="displayInfo()">Submit</button>
+    </form>
+
+    <h3 id="output"></h3>
+
+    <script>
+        function displayInfo() {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let email = document.getElementById("email").value;
+
+            document.getElementById("output").innerHTML =
+                "Name: " + name + "<br>" +
+                "Age: " + age + "<br>" +
+                "Email: " + email;
+        }
+    </script>
+
+</body>
+</html>

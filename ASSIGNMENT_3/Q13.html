@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+<script>
+    let a = Number(prompt("Enter first number:"));
+    let b = Number(prompt("Enter second number:"));
+    let operator = prompt("Enter operator (+, -, *, /, %):");
+
+    let result;
+
+    switch (operator) {
+        case "+":
+            result = a + b;
+            break;
+
+        case "-":
+            result = a - b;
+            break;
+
+        case "*":
+            result = a * b;
+            break;
+
+        case "/":
+            result = a / b;
+            break;
+
+        case "%":
+            result = a % b;
+            break;
+
+        default:
+            result = "Invalid operator";
+    }
+
+    document.write("Result = " + result);
+</script>
+
+</body>
+</html>

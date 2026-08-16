@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" id="name"><br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email"><br><br>
+
+        <label>Mobile:</label>
+        <input type="text" id="mobile"><br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password"><br><br>
+
+        <button type="button" onclick="validateForm()">Register</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function validateForm() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let password = document.getElementById("password").value;
+
+            let namePattern = /^[A-Za-z]+$/;
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let mobilePattern = /^\d{10}$/;
+            let passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+
+            if (!namePattern.test(name)) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Name";
+            }
+            else if (!emailPattern.test(email)) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Email";
+            }
+            else if (!mobilePattern.test(mobile)) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Mobile Number";
+            }
+            else if (!passwordPattern.test(password)) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Password";
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Registration Successful!";
+            }
+        }
+    </script>
+
+</body>
+</html>

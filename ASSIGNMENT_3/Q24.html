@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alphabet Validation</title>
+</head>
+<body>
+
+    <h2>Alphabet Validation</h2>
+
+    <input type="text" id="text" placeholder="Enter a string">
+
+    <button onclick="checkString()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkString() {
+            let text = document.getElementById("text").value;
+
+            let pattern = /^[A-Za-z]+$/;
+
+            if (pattern.test(text)) {
+                document.getElementById("result").innerHTML =
+                    "String contains only alphabets";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "String contains other characters";
+            }
+        }
+    </script>
+
+</body>
+</html>

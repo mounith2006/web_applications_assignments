@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validation</title>
+</head>
+<body>
+
+    <h2>Password Validation</h2>
+
+    <input type="password" id="password" placeholder="Enter password">
+
+    <button onclick="validatePassword()">Validate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+
+            let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
+
+            if (pattern.test(password)) {
+                document.getElementById("result").innerHTML =
+                    "Valid Password";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Invalid Password";
+            }
+        }
+    </script>
+
+</body>
+</html>

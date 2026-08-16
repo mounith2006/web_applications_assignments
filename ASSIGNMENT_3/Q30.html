@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Validation</title>
+</head>
+<body>
+
+    <h2>Form Validation</h2>
+
+    <label>Email:</label>
+    <input type="text" id="email"><br><br>
+
+    <label>Mobile Number:</label>
+    <input type="text" id="mobile"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <button onclick="validateForm()">Validate</button>
+
+    <p id="emailResult"></p>
+    <p id="mobileResult"></p>
+    <p id="passwordResult"></p>
+
+    <script>
+        function validateForm() {
+
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let password = document.getElementById("password").value;
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let mobilePattern = /^\d{10}$/;
+            let passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+
+            // Email validation
+            if (emailPattern.test(email)) {
+                document.getElementById("emailResult").innerHTML =
+                    "Valid Email";
+            } else {
+                document.getElementById("emailResult").innerHTML =
+                    "Invalid Email";
+            }
+
+            // Mobile validation
+            if (mobilePattern.test(mobile)) {
+                document.getElementById("mobileResult").innerHTML =
+                    "Valid Mobile Number";
+            } else {
+                document.getElementById("mobileResult").innerHTML =
+                    "Invalid Mobile Number";
+            }
+
+            // Password validation
+            if (passwordPattern.test(password)) {
+                document.getElementById("passwordResult").innerHTML =
+                    "Valid Password";
+            } else {
+                document.getElementById("passwordResult").innerHTML =
+                    "Invalid Password";
+            }
+        }
+    </script>
+
+</body>
+</html>

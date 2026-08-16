@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Digits</title>
+</head>
+<body>
+
+    <h2>Count Number of Digits</h2>
+
+    <script>
+        let number = 12345;
+        let temp = number;
+        let count = 0;
+
+        while (temp > 0) {
+            temp = Math.floor(temp / 10);
+            count++;
+        }
+        document.write("Number: " + number + "<br>");
+        document.write("Number of digits: " + count);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Counter</title>
+</head>
+<body>
+
+    <h2>Character Counter</h2>
+
+    <input type="text" id="textBox"placeholder="Enter text">
+
+    <p id="count">Characters: 0</p>
+
+    <script>
+        document.getElementById("textBox").addEventListener("keyup", function() {
+
+            let text = document.getElementById("textBox").value;
+
+            document.getElementById("count").innerHTML =
+                "Characters: " + text.length;
+        });
+    </script>
+
+</body>
+</html>

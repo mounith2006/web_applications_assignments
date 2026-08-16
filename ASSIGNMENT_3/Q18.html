@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+</head>
+<body>
+
+    <h2>Counter</h2>
+
+    <h3 id="count">0</h3>
+
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        let counter = 0;
+
+        // Increment function
+        function increment() {
+            counter++;
+            document.getElementById("count").innerHTML = counter;
+        }
+
+        // Decrement function
+        function decrement() {
+            counter--;
+            document.getElementById("count").innerHTML = counter;
+        }
+
+        // Reset function
+        function reset() {
+            counter = 0;
+            document.getElementById("count").innerHTML = counter;
+        }
+    </script>
+
+</body>
+</html>

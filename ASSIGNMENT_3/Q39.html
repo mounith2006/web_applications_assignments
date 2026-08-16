@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+</head>
+<body>
+
+    <h2>Simple Image Gallery</h2>
+
+    <img id="galleryImage" src="banner.jpg"
+         width="400" height="250">
+
+    <br><br>
+
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+        let images = [
+            "quiz.jpg",
+            "coding.jpg",
+            "hackathon.jpg"
+        ];
+
+        let currentImage = 0;
+
+        function displayImage() {
+            document.getElementById("galleryImage").src =
+                images[currentImage];
+        }
+
+        function nextImage() {
+            currentImage++;
+
+            if (currentImage >= images.length) {
+                currentImage = 0;
+            }
+
+            displayImage();
+        }
+
+        function previousImage() {
+            currentImage--;
+
+            if (currentImage < 0) {
+                currentImage = images.length - 1;
+            }
+
+            displayImage();
+        }
+    </script>
+
+</body>
+</html>

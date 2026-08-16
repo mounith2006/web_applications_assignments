@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Username Validation</title>
+</head>
+<body>
+
+    <h2>Username Validation</h2>
+
+    <input type="text" id="username" placeholder="Enter username">
+
+    <button onclick="validateUsername()">Validate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function validateUsername() {
+            let username = document.getElementById("username").value;
+
+            let pattern = /^[A-Za-z0-9_]{5,15}$/;
+
+            if (pattern.test(username)) {
+                document.getElementById("result").innerHTML =
+                    "Valid Username";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Invalid Username";
+            }
+        }
+    </script>
+
+</body>
+</html>

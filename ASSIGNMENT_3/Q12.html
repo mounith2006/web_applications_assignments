@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse a Number</title>
+</head>
+<body>
+
+    <h2>Reverse the Digits of a Number</h2>
+
+    <script>
+        let number = 12345;
+        let temp = number;
+        let reverse = 0;
+
+        while (temp > 0) {
+            let digit = temp % 10;
+            reverse = reverse * 10 + digit;
+            temp = Math.floor(temp / 10);
+        }
+
+        document.write("Original Number: " + number + "<br>");
+        document.write("Reversed Number: " + reverse);
+    </script>
+
+</body>
+</html>
