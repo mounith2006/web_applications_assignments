@@ -14,15 +14,14 @@
     </div>
 
     <script>
-        let box = document.getElementById("box");
 
         // When mouse enters the div
-        box.addEventListener("mouseenter", function() {
+        document.getElementById("box").addEventListener("mouseenter", function() {
             document.body.style.backgroundColor = "lightblue";
         });
 
         // When mouse leaves the div
-        box.addEventListener("mouseleave", function() {
+        document.getElementById("box").addEventListener("mouseleave", function() {
             document.body.style.backgroundColor = "white";
         });
     </script>
