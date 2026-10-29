@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+</head>
+<body>
+
+    <h2>Employee Management System</h2>
+
+    <h3>Add Employee</h3>
+
+    <form method="POST">
+        Employee Name:
+        <input type="text" name="name" required>
+        <br><br>
+
+        Department:
+        <input type="text" name="department" required>
+        <br><br>
+
+        Salary:
+        <input type="number" name="salary"
+               min="0" step="0.01" required>
+        <br><br>
+
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <h3>Employee Records</h3>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.department }}</td>
+            <td>{{ "%.2f"|format(emp.salary) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
