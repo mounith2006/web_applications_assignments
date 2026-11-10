@@ -5,36 +5,25 @@ app = Flask(__name__)
 
 html = """
 <h2>Hospital Appointment System</h2>
-
 <form method="POST">
-    Patient Name: <input type="text" name="name" required><br><br>
-
-    Doctor:
-    <select name="doctor" required>
-        <option value="">Select Doctor</option>
-        <option value="Dr. Ravi">Dr. Ravi</option>
-        <option value="Dr. Priya">Dr. Priya</option>
-        <option value="Dr. Kumar">Dr. Kumar</option>
-    </select><br><br>
-
-    Appointment Date:
-    <input type="date" name="appointment_date" required><br><br>
-
-    Contact Number:
-    <input type="text" name="contact" required><br><br>
-
+    <input type="text" name="name" placeholder="Patient Name">
+    <select name="doctor">
+        <option>Dr. Ravi</option>
+        <option>Dr. Priya</option>
+        <option>Dr. Kumar</option>
+    </select>
+    <input type="date" name="appointment_date">
+    <input type="text" name="contact">
     <input type="submit" value="Book Appointment">
 </form>
-
 <p style="color:red;">{{ error }}</p>
-
 {% if patient %}
     <h3>Appointment Confirmation</h3>
     <p>Patient Name: {{ patient }}</p>
     <p>Doctor: {{ doctor }}</p>
     <p>Appointment Date: {{ appointment_date }}</p>
     <p>Contact Number: {{ contact }}</p>
-    <h4>Your appointment has been booked successfully!</h4>
+    <h4>Appointment booked successfully!</h4>
 {% endif %}
 """
 

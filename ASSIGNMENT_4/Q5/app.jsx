@@ -4,14 +4,9 @@ function App() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
-
+    const interval = setInterval(() => {setTime(new Date());}, 1000);
     // Cleanup when component is unmounted
-    return () => {
-      clearInterval(interval);
-    };
+    return () => {clearInterval(interval);};
   }, []);
 
   return (
