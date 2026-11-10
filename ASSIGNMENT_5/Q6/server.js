@@ -6,7 +6,9 @@ const app = express();
 const auth = (req, res, next) => {
     if (req.query.role === 'admin') {
         next();
-    } else {
+    } 
+    else 
+        {
         res.send('Access Denied');
     }
 };

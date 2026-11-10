@@ -21,7 +21,8 @@ app.get('/students/:id', (req, res) => {
 
     if (student) {
         res.json(student);
-    } else {
+    } 
+    else {
         res.status(404).send('Student Not Found');
     }
 });

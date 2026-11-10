@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 function App() {
   const [time, setTime] = useState(new Date());
 
-  useEffect(() => {
+  useEffect(() => 
+  {
     const interval = setInterval(() => {setTime(new Date());}, 1000);
     // Cleanup when component is unmounted
     return () => {clearInterval(interval);};
