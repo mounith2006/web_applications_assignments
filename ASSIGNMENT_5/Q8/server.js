@@ -46,17 +46,20 @@ app.put('/books/:id', (req, res) => {
 
 // DELETE a book
 app.delete('/books/:id', (req, res) => {
-    const index = books.findIndex(b => b.id === Number(req.params.id));
 
-    if (index === -1) {
+    const book = books.find(
+        b => b.id === Number(req.params.id)
+    );
+
+    if (!book) {
         return res.status(404).json({ message: 'Book Not Found' });
     }
 
-    const deletedBook = books.splice(index, 1)[0];
+    books = books.filter(b => b.id !== Number(req.params.id));
 
     res.status(200).json({
         message: 'Book Deleted Successfully',
-        book: deletedBook
+        book: book
     });
 });
 

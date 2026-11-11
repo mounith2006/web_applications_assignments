@@ -50,9 +50,13 @@ async function main() {
     console.log("Remaining products:");
     console.log(finalProducts);
 
-  } catch (error) {
+  } 
+  catch (error) 
+  {
     console.error("Error:", error);
-  } finally {
+  } 
+  finally 
+  {
     await client.close();
   }
 }
